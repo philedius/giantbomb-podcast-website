@@ -1,0 +1,244 @@
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+#header {
+    background-color: #3F51B5;
+    height: 750px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    color: white;
+}
+
+#header h1 {
+    margin: 0;
+    font-size: 70pt;
+}
+
+#header p {
+    font-size: 16pt;
+}
+
+#header-content {
+    padding-top: 10em;
+}
+
+#header-content a {
+    color: white;
+}
+
+.episode-list {
+    display: inline-block;
+    position: relative;
+    top: -350px;
+    text-align: center;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+#bombcast-title {
+    color: white;
+    text-align: center;
+
+}
+
+#beastcast-title {
+    color: white;
+    text-align: center;
+}
+
+.bombcast {
+    float: left;
+    width: 49%;
+    margin: 0;
+    margin-left: 1em;
+    padding: 0;
+    /*text-align: right;*/
+    /*border: 1px solid black;*/
+}
+
+.beastcast {
+    float: right;
+    width: 49%;
+    margin: 0;
+    margin-right: 1em;
+    /*text-align: left;*/
+    padding: 0;
+    /*border: 1px solid black;*/
+}
+.episode {
+    color: #212121;
+    background-color: white;
+    overflow: hidden;
+    text-align: left;
+    display: inline-block;
+    width: 100%;
+    max-width: 800px;
+    height: 180px;
+    margin: 0 0em -0.2em 0em;
+    -webkit-box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.25);
+    -moz-box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.25);
+    box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.25);
+    border-bottom: 1px solid #D5D5D5;
+}
+
+.image {
+    display: inline-block;
+    float: left;
+    width: 350px;
+    height: 100%;
+    margin: 0 auto;
+    margin-right: 1em;
+    background-color: white;
+}
+
+.image img {
+    width: 100%;
+}
+
+.episode .title a {
+    color: #212121;
+    text-decoration: none;
+}
+
+.episode:hover .title a{
+    color: #3F51B5;
+}
+
+.episode .title {
+    padding: 0 1em 0 1em;
+    margin-top: 0.8em;
+    margin-bottom: 0.2em;
+    font-size: 13pt;
+}
+
+.episode .date {
+    font-size: 8pt;
+    margin: 0;
+    padding: 0;
+}
+
+.episode .summary {
+    padding: 0 1em 0em 1em;
+    margin-bottom: 0.7em;
+    margin-top: 0.5em;
+    font-size: 10pt;
+}
+
+.episode .duration {
+    margin-right: 3em;
+    font-size: 8pt;
+    float: right;
+}
+
+.episode .download-link {
+    font-size: 10pt;
+    text-decoration: none;
+    font-weight: bold;
+    color: #c2185b;
+}
+
+.episode .download-link {
+    color: #3F51B5;
+}
+
+@media (max-width: 1600px) {
+  .episode-list {
+    width: 95%;
+  }
+
+  .beastcast {
+    width: 48%;
+  }
+
+  .bombcast {
+    width: 48%;
+  }
+
+  .episode {
+    width: 90%;
+    height: 100px;
+  }
+
+  .episode .image {
+    width: 25%;
+    height: 100%;
+    overflow: hidden;
+    text-align: center;
+  }
+
+  .episode img {
+    display: inline-block;
+    min-width: 100%;
+    width: auto;
+    position: relative;
+    height: 100%;
+  }
+
+  .episode .summary {
+    display: none;
+  }
+
+  .episode .download-link {
+    float: left;
+    margin: 10px;
+  }
+
+  .episode .duration {
+    display: none;
+  }
+
+  .episode .date {
+    margin-top: 10px;
+    margin-right: 5em;
+    float: left;
+  }
+
+}
+
+@media (max-width: 950px) {
+
+    #header {
+        min-width: 800px;
+    }
+
+    #header h1 {
+        font-size: 40pt;
+    }
+
+    .episode-list {
+        min-width: 800px;
+    }
+
+    .beastcast {
+        min-width: 380px;
+    }
+
+    .bombcast {
+        min-width: 380px
+    }
+
+    .episode .summary {
+        display: none;
+    }
+
+    .episode {
+        min-width: 390px;
+    }
+
+    .episode .title {
+        font-size: 10pt;
+    }
+
+    .episode .download-link {
+        font-size: 8pt;
+    }
+}

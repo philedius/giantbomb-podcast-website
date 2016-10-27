@@ -1,0 +1,26 @@
+doctype html
+html
+  head
+    title bombcast
+    meta(name='viewport', content='initial-scale=1.0')
+    meta(charset='utf-8')
+    link(href='/styles.css', rel='stylesheet')
+    link(href='https://fonts.googleapis.com/css?family=Roboto', rel='stylesheet')
+  #header
+    #header-content
+      h1
+        a(href='http://www.videogames.com') Giant Bomb
+        |  Podcasts!
+      p
+        | Extracted from
+        a(href='http://www.giantbomb.com/feeds/') their RSS feeds
+        |  and put here for quicker browsing!
+  body
+    .episode-list
+      .bombcast
+        h1#bombcast-title The Bombcast
+      .beastcast
+        h1#beastcast-title The Beastcast
+    script(src='https://code.jquery.com/jquery-3.1.1.min.js', integrity='sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=', crossorigin='anonymous')
+    script(src='/scripts/node_modules/jquery-lazyload/jquery.lazyload.js')
+    script(src='/scripts/main.js')
