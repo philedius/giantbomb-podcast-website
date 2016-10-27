@@ -18,6 +18,7 @@
   "dependencies": {
     "express": "^4.14.0",
     "gulp-nodemon": "^2.2.1",
+    "gulp-pug": "^3.1.0",
     "pug": "^2.0.0-beta6"
   }
 }

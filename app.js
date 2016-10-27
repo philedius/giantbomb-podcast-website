@@ -5,7 +5,6 @@ app.use(express.static('public'));
 app.use('/scripts', express.static(__dirname));
 
 app.set('view engine', 'pug');
-// app.set('views', path.join(__dirname, ''));
 
 app.get('/', function(req, res) {
     var data = require('./giantbomb.json');
