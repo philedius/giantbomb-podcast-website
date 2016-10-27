@@ -7,10 +7,11 @@ app.use('/scripts', express.static(__dirname));
 app.set('view engine', 'pug');
 // app.set('views', path.join(__dirname, ''));
 
-app.get('/', function (req, res) {
- res.render('index');
+app.get('/', function(req, res) {
+    var data = require('./giantbomb.json');
+    res.render('index', {data: data});
 });
 
-app.listen(3000, function () {
-  console.log('Example app listening on port 3000!');
+app.listen(3000, function() {
+    console.log('Example app listening on port 3000!');
 });

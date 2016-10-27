@@ -1,26 +1,50 @@
 doctype html
 html
-  head
-    title bombcast
-    meta(name='viewport', content='initial-scale=1.0')
-    meta(charset='utf-8')
-    link(href='/styles.css', rel='stylesheet')
-    link(href='https://fonts.googleapis.com/css?family=Roboto', rel='stylesheet')
-  #header
-    #header-content
-      h1
-        a(href='http://www.videogames.com') Giant Bomb
-        |  Podcasts!
-      p
-        | Extracted from
-        a(href='http://www.giantbomb.com/feeds/') their RSS feeds
-        |  and put here for quicker browsing!
-  body
-    .episode-list
-      .bombcast
-        h1#bombcast-title The Bombcast
-      .beastcast
-        h1#beastcast-title The Beastcast
-    script(src='https://code.jquery.com/jquery-3.1.1.min.js', integrity='sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=', crossorigin='anonymous')
-    script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js')
-    script(src='/scripts/main.js')
+    head
+        title bombcast
+        meta(name='viewport', content='initial-scale=1.0')
+        meta(charset='utf-8')
+        link(href='/styles.css', rel='stylesheet')
+        link(href='https://fonts.googleapis.com/css?family=Roboto', rel='stylesheet')
+    #header
+        #header-content
+            h1
+                a(href='http://www.videogames.com') Giant Bomb
+                |  Podcasts!
+            p
+                | Extracted from
+                a(href='http://www.giantbomb.com/feeds/') their RSS feeds
+                |  and put here for quicker browsing!
+    body
+        .episode-list
+            .bombcast
+                h1#bombcast-title The Bombcast
+                each episode in data.bombcast
+                    .episode
+                        .image
+                            img.bombcast-img(data-original=episode.image, onerror='replaceWithBiggerImage(this)')
+                        .info
+                            h3.title
+                                a(href='http://www.prump.is')=episode.title
+                            span.date=episode.date
+                            p.summary=episode.summary
+                            a.download-link(href=episode.download_link) Download Episode
+                            span.duration=episode.duration
+
+            .beastcast
+                h1#beastcast-title The Beastcast
+                each episode in data.beastcast
+                    .episode
+                        .image
+                            img.beastcast-img(data-original=episode.image, onerror='replaceWithBiggerImage(this)')
+                        .info
+                            h3.title
+                                a(href='http://www.prump.is')=episode.title
+                            span.date=episode.date
+                            p.summary=episode.summary
+                            a.download-link(href=episode.download_link) Download Episode
+                            span.duration=episode.duration
+
+        script(src='https://code.jquery.com/jquery-3.1.1.min.js', integrity='sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=', crossorigin='anonymous')
+        script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js')
+        script(src='/scripts/main.js')

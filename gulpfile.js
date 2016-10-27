@@ -15,7 +15,7 @@ var nodemon = require('gulp-nodemon');
 gulp.task('browser-sync', ['nodemon'], function() {
   browserSync.init(null, {
     proxy: "http://localhost:3000",
-        files: ["/.*"],
+        files: ["**/*.*"],
         // browser: "google chrome",
         port: 7000,
   });
@@ -47,5 +47,6 @@ gulp.task('default', ['browser-sync'], function(){
         .pipe(browserSync.stream());
   });
   gulp.watch("*.js", ['bs-reload']);
+  gulp.watch("./views/*.pug", ['bs-reload']);
   gulp.watch("*.html", ['bs-reload']);
 });

@@ -3,35 +3,37 @@ var medium = 0
 var large = 0
 var original = 0
 $(document).ready(function() {
-    $.getJSON('/scripts/giantbomb.json', function (data) {
-        console.log(data);
-        small = data.bombcast.length + data.beastcast.length;
-        for (var i = 0; i < data.bombcast.length; i++) {
-            episode = data.bombcast[i];
-            $('.bombcast').append(getEpisodeHtml(episode, 'bombcast'));
-        }
+    // $.getJSON('/scripts/giantbomb.json', function (data) {
+    //     console.log(data);
+    //     small = data.bombcast.length + data.beastcast.length;
+    //     for (var i = 0; i < data.bombcast.length; i++) {
+    //         episode = data.bombcast[i];
+    //         $('.bombcast').append(getEpisodeHtml(episode, 'bombcast'));
+    //     }
+    //
+    //     for (var i = 0; i < data.beastcast.length; i++) {
+    //         episode = data.beastcast[i];
+    //         $('.beastcast').append(getEpisodeHtml(episode, 'beastcast'));
+    //     }
+    //
+    //
+    //
+    // });
 
-        for (var i = 0; i < data.beastcast.length; i++) {
-            episode = data.beastcast[i];
-            $('.beastcast').append(getEpisodeHtml(episode, 'beastcast'));
-        }
+    lazyloadSettings = {
+        appear : function(elements_left, settings) {
+            replaceWithBiggerImage(this);
+        },
+        threshold: 800,
+        placeholder: 'http://images.all-free-download.com/images/graphicthumb/plain_white_background_211387.jpg'
+    };
 
-        lazyloadSettings = {
-            appear : function(elements_left, settings) {
-                replaceWithBiggerImage(this);
-            },
-            threshold: 800,
-            placeholder: 'http://images.all-free-download.com/images/graphicthumb/plain_white_background_211387.jpg'
-        };
+    $(function() {
+        $(".beastcast-img").lazyload(lazyloadSettings);
+    });
 
-        $(function() {
-            $(".beastcast-img").lazyload(lazyloadSettings);
-        });
-
-        $(function() {
-            $(".bombcast-img").lazyload(lazyloadSettings);
-        });
-
+    $(function() {
+        $(".bombcast-img").lazyload(lazyloadSettings);
     });
 });
 
