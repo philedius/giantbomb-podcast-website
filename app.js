@@ -1,6 +1,7 @@
 var express = require('express');
 var path = require('path');
 var app = express();
+
 app.use(express.static('public'));
 app.use('/scripts', express.static(__dirname));
 app.set('port', (process.env.PORT || 3000));

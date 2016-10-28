@@ -1,6 +1,15 @@
 {
     "beastcast": [
         {
+            "title": "The Giant Beastcast - Episode 75", 
+            "image": "http://static.giantbomb.com/uploads/scale_small/0/31/2896015-beastcast_10272016.jpg", 
+            "summary": "Jeff Gerstmann joins us to talk about the the past, present, and future of reviewing games. Take a wonderful, historical tour with us as we ponder what the next years might bring. We also share some thoughts on Battlefield 1, Titanfall 2, Civ VI, Hololens", 
+            "date": "28 Oct 2016", 
+            "link": "http://www.giantbomb.com/podcasts/the-giant-beastcast-episode-75/1600-1771/", 
+            "download_link": "http://www.giantbomb.com/podcasts/download/1771/Ep75_-_The_Giant_Beastcast-10-27-2016-8247861364.mp3", 
+            "duration": "2h 24m 55s"
+        }, 
+        {
             "title": "The Giant Beastcast - Episode 74", 
             "image": "http://static.giantbomb.com/uploads/scale_small/0/31/2894793-hitch.jpg", 
             "summary": "We bring Waypoint's own Austin Walker to clear up the differences between Will Smith's Hitch and Nintendo's Switch. We also talk Red Dead, Battlefield 1, Gonner, and Civ 6 as well as send our best wishes and a \"thank you\" to United Front Games.", 
@@ -685,7 +694,7 @@
             "duration": "0h 0m 44s"
         }
     ], 
-    "last_updated": "2016-10-27 21:58:32.972000", 
+    "last_updated": "2016-10-28 11:05:09.762000", 
     "bombcast": [
         {
             "title": "Giant Bombcast 453: Big Beautiful Baked Potato", 
